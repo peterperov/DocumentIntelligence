@@ -11,6 +11,8 @@ from azure.ai.formrecognizer import DocumentAnalysisClient
 
 from dotenv import dotenv_values
 
+import json
+
 config = dotenv_values(".env")
 speech_api_key = config.get("AZURE_SPEECH_API_KEY", None)
 speech_region = config.get("AZURE_SPEECH_REGION", None)
@@ -31,7 +33,15 @@ formUrl = "https://raw.githubusercontent.com/Azure-Samples/cognitive-services-RE
 document_analysis_client = DocumentAnalysisClient( endpoint=fr_endpoint, credential=AzureKeyCredential(fr_key) )
 # poller = document_analysis_client.begin_analyze_document_from_url("prebuilt-idDocument", formUrl)
 
-fr_locale="en-US"
+# SDK documentation:
+# https://learn.microsoft.com/en-us/python/api/azure-ai-formrecognizer/azure.ai.formrecognizer.documentanalysisclient?view=azure-python
+# languages support
+# https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/language-support-ocr
+# Greek	el
+
+
+# fr_locale="en-US"
+fr_locale="el"
 
 
 with open(image_file, "rb") as f:
@@ -40,9 +50,16 @@ with open(image_file, "rb") as f:
     )
 id_documents = poller.result()
 
-
+print (poller.result)
 
 for idx, id_document in enumerate(id_documents.documents):
+    print(idx)
+    print("---")
+    
+    json_data = json.dumps(id_document, indent=4)
+    f = open('data.json', 'wb')
+    f.write(json_data)
+
     print("--------Recognizing ID document #{}--------".format(idx + 1))
     first_name = id_document.fields.get("FirstName")
     if first_name:
