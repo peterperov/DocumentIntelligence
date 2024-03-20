@@ -105,22 +105,23 @@ cv2.imwrite(out_file, img_resize)
 
 # ###################################
 
+analyze_url = computer_vision_url + "vision/v3.0/read/analyze"
 
-# Define Read API OCR endpoint
-# read_api_url = "{}/vision/v3.0/read/analyze".format(computer_vision_url)
-
-read_api_url = computer_vision_url + "vision/v3.1/ocr"
-headers = {'Ocp-Apim-Subscription-Key': computer_vision_key}
+image_data = open(out_file, "rb").read()
+# Set Content-Type to octet-stream
+headers = {'Ocp-Apim-Subscription-Key': computer_vision_key, 'Content-Type': 'application/octet-stream'}
 
 # Call Read API to perform OCR
 response = requests.post(
-    url=read_api_url,
-    data=img_str,
+    url=analyze_url,
+    data=image_data,
     headers={
         "Ocp-Apim-Subscription-Key": computer_vision_key,
         "Content-Type": "application/octet-stream",
     },
 )
+
+time.sleep(3)
 
 # Call Read API to get result
 response_final = requests.get(
@@ -128,11 +129,7 @@ response_final = requests.get(
     headers={"Ocp-Apim-Subscription-Key": computer_vision_key},
 )
 
-
-
-response.raise_for_status()
-
-time.sleep(3)
+response_final.raise_for_status()
 
 result = response_final.json()
 
@@ -143,4 +140,5 @@ for line in result["analyzeResult"]["readResults"][0]["lines"]:
     print("Recognised text:", line["text"])
 
     
+
 
