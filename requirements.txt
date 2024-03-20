@@ -1,0 +1,7 @@
+python-dotenv
+azure-ai-formrecognizer
+opencv-python
+imutils
+requests
+matplotlib
+numpy

@@ -14,8 +14,6 @@ from dotenv import dotenv_values
 import json
 
 config = dotenv_values(".env")
-speech_api_key = config.get("AZURE_SPEECH_API_KEY", None)
-speech_region = config.get("AZURE_SPEECH_REGION", None)
 
 # FORM_RECOGNIZER_ENDPOINT
 fr_endpoint = config.get("FORM_RECOGNIZER_ENDPOINT", None)

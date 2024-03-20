@@ -11,6 +11,21 @@ https://pypi.org/project/azure-ai-formrecognizer/
     pip install azure-ai-formrecognizer
 ```
 
+# .env file
+
+```
+
+FORM_RECOGNIZER_ENDPOINT = "https://eastus.api.cognitive.microsoft.com/"
+FORM_RECOGNIZER_KEY = ""
+
+CUSTOM_VISION_API_KEY = ""
+
+COMPUTER_VISION_URL = ""
+COMPUTER_VISION_API_KEY = ""
+
+```
+
+
 
 # Codez
 
