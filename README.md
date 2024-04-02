@@ -3,6 +3,12 @@
 
 # Prereqs
 
+## train images
+
+http://www.zemris.fer.hr/projects/LicensePlates/english/baza_slika.zip
+
+
+## pip installs
 
 https://pypi.org/project/azure-ai-formrecognizer/
 
