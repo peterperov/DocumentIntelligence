@@ -10,6 +10,8 @@ http://www.zemris.fer.hr/projects/LicensePlates/english/baza_slika.zip
 
 ## pip installs
 
+pip install -r requirements. txt
+
 https://pypi.org/project/azure-ai-formrecognizer/
 
 
