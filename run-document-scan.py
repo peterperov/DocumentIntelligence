@@ -54,9 +54,9 @@ for idx, id_document in enumerate(id_documents.documents):
     print(idx)
     print("---")
     
-    json_data = json.dumps(id_document, indent=4)
-    f = open('data.json', 'wb')
-    f.write(json_data)
+    # json_data = json.dumps(id_document, indent=4)
+    # f = open('data.json', 'wb')
+    # f.write(json_data)
 
     print("--------Recognizing ID document #{}--------".format(idx + 1))
     first_name = id_document.fields.get("FirstName")
