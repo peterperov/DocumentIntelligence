@@ -9,6 +9,14 @@ https://pypi.org/project/azure-ai-formrecognizer/
 
 ```
     pip install azure-ai-formrecognizer
+
+    pip install matplotlib
+
+    pip install opencv-python
+
+
+    pip install imutils
+
 ```
 
 # .env file
