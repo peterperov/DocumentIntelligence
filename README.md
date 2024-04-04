@@ -27,16 +27,20 @@ https://pypi.org/project/azure-ai-formrecognizer/
 
 # .env file
 
+.env file needs to be placed at this folder with the following key/value pairs defined. 
+
 ```
 
 FORM_RECOGNIZER_ENDPOINT = "https://eastus.api.cognitive.microsoft.com/"
 FORM_RECOGNIZER_KEY = ""
 
 CUSTOM_VISION_API_KEY = ""
+CUSTOM_VISION_API_KEY = ""
 
 COMPUTER_VISION_URL = ""
 COMPUTER_VISION_API_KEY = ""
 
+ 
 ```
 
 
