@@ -41,7 +41,6 @@ document_analysis_client = DocumentAnalysisClient( endpoint=fr_endpoint, credent
 # fr_locale="en-US"
 fr_locale="el"
 
-
 with open(image_file, "rb") as f:
     poller = document_analysis_client.begin_analyze_document(
         "prebuilt-idDocument", document=f, locale=fr_locale

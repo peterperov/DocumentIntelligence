@@ -44,6 +44,13 @@ COMPUTER_VISION_API_KEY = ""
 ```
 
 
+# Microsoft Document Intelligence sample code: 
+ 
+Samples with detailed explanation:
+ 
+https://azuresdkdocs.blob.core.windows.net/$web/python/azure-ai-formrecognizer/3.2.0b1/index.html#using-the-general-document-model
+
+
 
 # Codez
 
