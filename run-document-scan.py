@@ -13,6 +13,11 @@ from dotenv import dotenv_values
 
 import json
 
+import matplotlib.pyplot as plt
+import cv2
+import imutils
+import time
+
 config = dotenv_values(".env")
 
 # FORM_RECOGNIZER_ENDPOINT
@@ -20,10 +25,17 @@ fr_endpoint = config.get("FORM_RECOGNIZER_ENDPOINT", None)
 # FORM_RECOGNIZER_KEY
 fr_key = config.get("FORM_RECOGNIZER_KEY", None)
 
-image_file = "W:/GITHUB/DocumentIntelligence/IrishDL/Ireland DL 001.png"
+# image_file = "W:/GITHUB/DocumentIntelligence/IrishDL/Ireland DL 001.png"
 
 # W:/GITHUB/DocumentIntelligence/SamplePictures/Driving License 01.jpg
 image_file = "W:/GITHUB/DocumentIntelligence/SamplePictures/Driving License 01.jpg"
+
+
+# show image
+
+img = cv2.imread(image_file, 1)
+plt.imshow(img)
+plt.show()
 
 # sample document
 formUrl = "https://raw.githubusercontent.com/Azure-Samples/cognitive-services-REST-api-samples/master/curl/form-recognizer/DriverLicense.png"
