@@ -10,6 +10,8 @@ http://www.zemris.fer.hr/projects/LicensePlates/english/baza_slika.zip
 
 ## pip installs
 
+pip install -r requirements. txt
+
 https://pypi.org/project/azure-ai-formrecognizer/
 
 
@@ -27,17 +29,28 @@ https://pypi.org/project/azure-ai-formrecognizer/
 
 # .env file
 
+.env file needs to be placed at this folder with the following key/value pairs defined. 
+
 ```
 
 FORM_RECOGNIZER_ENDPOINT = "https://eastus.api.cognitive.microsoft.com/"
 FORM_RECOGNIZER_KEY = ""
 
 CUSTOM_VISION_API_KEY = ""
+CUSTOM_VISION_API_KEY = ""
 
 COMPUTER_VISION_URL = ""
 COMPUTER_VISION_API_KEY = ""
 
+ 
 ```
+
+
+# Microsoft Document Intelligence sample code: 
+ 
+Samples with detailed explanation:
+ 
+https://azuresdkdocs.blob.core.windows.net/$web/python/azure-ai-formrecognizer/3.2.0b1/index.html#using-the-general-document-model
 
 
 
